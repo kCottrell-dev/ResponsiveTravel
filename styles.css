@@ -1,0 +1,237 @@
+/*
+Author: Kenneth Cottrell
+Date:  10/14/2020
+*/
+
+html {
+  height: 100%;
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 12px;
+  background: url(branson.jpg) center center / cover no-repeat fixed;
+}
+
+body {
+   box-shadow: rgb(51, 51, 51) 5px 0px 15px,
+               rgb(51, 51, 51) -5px 0px 15px;
+   margin: 0px auto;
+   min-height: 100%;
+   min-width: 320px;
+   max-width: 1024px;
+   width: 100%;
+}
+
+body header {
+   background-color: #EDC7B7;
+}
+
+body header img {
+   display: block;
+   width: 100%;
+}
+
+/* Horizonal Navigation Styles */
+
+nav.horizontal {
+   background-color: #BAB2B5;
+   min-height: 2em;
+}
+
+nav.horizontal li {
+   color: rgb(31, 73, 125);
+   display: block;
+   line-height: 2em;
+   text-transform: uppercase;
+}
+
+nav.horizontal a {
+   display: block;
+   font-size: 1em;
+}
+
+
+nav.horizontal a:visited, nav.horizontal a:link {
+   color: rgb(31, 73, 125);
+}
+
+nav.horizontal a:hover, nav.horizontal a:active {
+   background-color: rgb(31, 73, 125);
+   color: white;
+}
+
+/* Main Menu Styles */
+
+ul.menu {
+   display: block;
+}
+
+ul.menu > li {
+   text-indent: 15px;
+}
+
+ul.menu > li:first-of-type a {
+   color: white;
+   background-color: rgb(31, 73, 125);
+}
+
+/* Submenu Styles */
+
+ul.submenu {
+   width: 100%;
+   background-color: #BAB2B5;
+}
+
+/* Pulldown Menu Styles */
+
+ul.submenu {
+  display: none;
+}
+
+a.submenuTitle:hover+ul.submenu, ul.submenu:hover {
+  display: block;
+}
+
+/* Section Styles */
+
+
+section {
+   background-color: #BAB2B5;
+   clear: both;
+}
+
+section article {
+   line-height: 1.2em;
+   padding: 5px;
+   font-size: 1.2em;
+}
+
+table, td {
+  border: 1px solid black;
+  padding: 15px;
+  margin-top: 65px;
+}
+
+
+/* Footer Styles */
+
+body > footer {
+   background-color: #EDC7B7;
+   font-size: 0.9em;
+   text-align: center;
+   padding: 10px 0px;
+}
+
+/* Flex Styles */
+
+.container {
+  display: flex;
+}
+
+.container > div {
+margin: 10px;
+}
+
+.one {
+  text-align: center;
+  padding-right: 150px;
+  padding-top: 100px;
+  font-size: 20px;
+}
+
+.two {
+  text-align: center;
+  font-size: 13px;
+  position: relative;
+  left: 175px;
+}
+
+
+
+/* =================================
+    Mobile Styles: 0px to 480px
+   =================================
+*/
+
+
+@media only screen and (max-width: 480px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  ul.main > li {
+     float: left;
+     position: relative;
+     width: 20%;
+   }
+
+   ul.submenu {
+     width: 200%;
+     box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+     position: absolute;
+   }
+
+   article{
+     width: 100%;
+   }
+
+
+
+.one {
+  position: relative;
+  left: 65px;
+}
+
+.two{
+  position: relative;
+  left: -10px;
+}
+
+html {
+  width: 100%;
+}
+
+}
+
+
+
+/* =================================
+    Tablet Styles: 481px and greater
+   =================================
+*/
+
+@media only screen and (min-width: 768px) {
+
+
+
+  ul.submenu {
+     background: transparent;
+     box-shadow: none;
+     display: block;
+     position: relative;
+     width: 100%;
+
+   }
+
+   nav.horizontal::after {
+     clear: both;
+     content: "";
+     display: table;
+   }
+
+   nav.horizontal a.submenuTitle {
+     display: inline;
+   }
+
+   article {
+     float: left;
+     margin-right: 5%;
+     width: 100%;
+   }
+
+    .one {
+      position: relative;
+      left: 90px;
+
+    }
+
+}
