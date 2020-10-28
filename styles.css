@@ -219,10 +219,7 @@ html {
    }
 
    nav.horizontal a.submenuTitle {
-     display: block;
-     background-color: rgb(31, 73, 125);
-     color: white;
-
+     display: inline;
    }
 
    article {
