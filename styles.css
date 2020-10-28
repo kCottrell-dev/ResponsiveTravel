@@ -205,12 +205,12 @@ html {
 
   ul.submenu {
      background: transparent;
-     box-shadow: none;
-     display: block;
+     display: flex;
      position: relative;
      width: 100%;
 
    }
+
 
    nav.horizontal::after {
      clear: both;
@@ -219,7 +219,10 @@ html {
    }
 
    nav.horizontal a.submenuTitle {
-     display: inline;
+     display: block;
+     background-color: rgb(31, 73, 125);
+     color: white;
+
    }
 
    article {
